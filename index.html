@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIVAR Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="#home" class="site-brand" aria-label="VIVAR Studio">
+        <img
+          id="siteLogo"
+          src="img/logo.png"
+          alt="VIVAR Studio"
+          data-logo-light="img/logo.png"
+          data-logo-dark="img/logo-negro.png"
+        />
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#experiencia">Experiencia</a>
+        <a href="#diferenciales">Diferenciales</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a href="https://wa.me/5490000000000" class="header-cta" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#experiencia">Experiencia</a>
+      <a href="#diferenciales">Diferenciales</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://wa.me/5490000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-slider" id="home">
+      <div class="hero-slider__track" id="heroTrack">
+        <div class="hero-slide is-active">
+          <img src="img/hero-1.webp" alt="Outdoor kitchen premium Vivar" />
+        </div>
+        <div class="hero-slide">
+          <img src="img/hero-2.webp" alt="Espacio exterior con diseño premium" />
+        </div>
+        <div class="hero-slide">
+          <img src="img/hero-3.webp" alt="Outdoor mobile kitchen Vivar Studio" />
+        </div>
+      </div>
+
+      <div class="hero-slider__overlay"></div>
+
+      <div class="hero-slider__controls">
+        <button class="hero-slider__arrow hero-slider__arrow--prev" id="prevSlide" aria-label="Imagen anterior">‹</button>
+        <button class="hero-slider__arrow hero-slider__arrow--next" id="nextSlide" aria-label="Siguiente imagen">›</button>
+      </div>
+
+      <div class="hero-slider__dots" id="heroDots">
+        <button class="is-active" aria-label="Ir a slide 1"></button>
+        <button aria-label="Ir a slide 2"></button>
+        <button aria-label="Ir a slide 3"></button>
+      </div>
+
+      <span class="hero-scroll">Scroll</span>
+    </section>
+
+    <section class="intro-editorial reveal" id="experiencia">
+      <div class="container intro-editorial__inner">
+        <div class="intro-editorial__left">
+          <span class="section-kicker">Outdoor Mobile Kitchens</span>
+          <h1 class="intro-editorial__title">
+            Vivir afuera<br>
+            para conectar adentro
+          </h1>
+        </div>
+
+        <div class="intro-editorial__right">
+          <p class="intro-editorial__text">
+            En VIVAR diseñamos espacios exteriores que transforman la forma en la que disfrutás tu hogar.
+            Propuestas pensadas para cocinar, recibir, compartir y vivir el afuera con una estética contemporánea y una experiencia cuidada en cada detalle.
+          </p>
+
+          <div class="intro-editorial__actions">
+            <a href="https://wa.me/5490000000000" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              Consultar proyecto
+            </a>
+            <a href="#proyectos" class="btn btn--secondary-dark">
+              Ver proyectos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-band reveal" aria-label="Franja visual Vivar">
+      <img src="img/medio.webp" alt="Outdoor kitchen Vivar Studio" />
+    </section>
+
+    <section class="section section--gray reveal" id="diferenciales">
+      <div class="container">
+        <div class="section-head section-head--narrow">
+          <span class="section-kicker section-kicker--dark">Por qué Vivar</span>
+          <h2 class="section-title">Diseño, funcionalidad y experiencia en equilibrio.</h2>
+          <p class="section-intro">
+            Cada proyecto está pensado para integrarse al espacio, elevar la experiencia de uso
+            y sostener una estética contemporánea en cada detalle.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <span class="feature-card__number">01</span>
+            <h3>Diseño integrado</h3>
+            <p>Propuestas que dialogan con la arquitectura, el entorno y el estilo de vida de cada espacio.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-card__number">02</span>
+            <h3>Estética contemporánea</h3>
+            <p>Líneas limpias, materiales nobles y una presencia visual que eleva la experiencia del afuera.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-card__number">03</span>
+            <h3>Personalización real</h3>
+            <p>Cada proyecto se adapta a la forma en la que cada cliente cocina, recibe y comparte.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-card__number">04</span>
+            <h3>Implementación ágil</h3>
+            <p>Un proceso claro, eficiente y cuidado para pasar de idea a realidad con mayor fluidez.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--black reveal" id="proceso">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="section-kicker">Proceso</span>
+          <h2 class="section-title section-title--light">Una experiencia simple, clara y cuidada en cada etapa.</h2>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <span>01</span>
+            <h3>Primer contacto</h3>
+            <p>Conocemos tu espacio, tus necesidades y la experiencia que querés crear.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <span>02</span>
+            <h3>Visita y análisis</h3>
+            <p>Evaluamos el entorno para definir la mejor propuesta funcional y estética.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <span>03</span>
+            <h3>Diseño a medida</h3>
+            <p>Elegimos materiales, terminaciones y configuración para lograr un proyecto alineado a vos.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <span>04</span>
+            <h3>Producción</h3>
+            <p>Fabricación cuidada, materiales seleccionados y tiempos de trabajo definidos.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <span>05</span>
+            <h3>Instalación</h3>
+            <p>Un cierre ágil para que tu espacio empiece a disfrutarse desde el primer día.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white reveal" id="proyectos">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker section-kicker--dark">Proyectos</span>
+          <h2 class="section-title">Espacios pensados para quedarse más tiempo.</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <img src="img/project-1.webp" alt="Proyecto Vivar 1" />
+            <div class="project-card__content">
+              <h3>Outdoor kitchen integrada</h3>
+              <p>Una propuesta que combina presencia visual, funcionalidad y un vínculo natural con el entorno.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <img src="img/project-2.webp" alt="Proyecto Vivar 2" />
+            <div class="project-card__content">
+              <h3>Espacio para recibir</h3>
+              <p>Diseño pensado para encuentros, comidas al aire libre y momentos compartidos.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <img src="img/project-3.webp" alt="Proyecto Vivar 3" />
+            <div class="project-card__content">
+              <h3>Experiencia exterior</h3>
+              <p>Soluciones que elevan la forma de vivir el hogar a través del diseño y el uso real.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section reveal" id="contacto">
+      <div class="container cta-section__inner">
+        <span class="section-kicker">Contacto</span>
+        <h2 class="section-title section-title--light">Es momento de vivir tu espacio exterior de otra manera.</h2>
+        <p>
+          Hablemos sobre tu proyecto y diseñemos una experiencia pensada para disfrutar el afuera.
+        </p>
+        <a href="https://wa.me/5490000000000" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+          Hablar por WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
