@@ -1,0 +1,49 @@
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+  header("Location: contacto.html");
+  exit;
+}
+
+$destino = "contacto@vivarstudio.com";
+
+$nombre = htmlspecialchars(trim($_POST["nombre"] ?? ""));
+$email = filter_var(trim($_POST["email"] ?? ""), FILTER_SANITIZE_EMAIL);
+$telefono = htmlspecialchars(trim($_POST["telefono"] ?? ""));
+$zona = htmlspecialchars(trim($_POST["zona"] ?? ""));
+$mensaje = htmlspecialchars(trim($_POST["mensaje"] ?? ""));
+
+if (!$nombre || !$email || !$mensaje || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  header("Location: contacto.html?error=1");
+  exit;
+}
+
+$asunto = "Nueva consulta desde VIVAR Studio";
+
+$contenido = "
+Nombre: $nombre
+
+Email: $email
+
+Teléfono: $telefono
+
+Zona: $zona
+
+Mensaje:
+$mensaje
+";
+
+$headers = "From: VIVAR Studio <contacto@vivarstudio.com>\r\n";
+$headers .= "Reply-To: $email\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+$enviado = mail($destino, $asunto, $contenido, $headers);
+
+if ($enviado) {
+  header("Location: contacto.html?enviado=ok");
+} else {
+  header("Location: contacto.html?error=1");
+}
+
+exit;
+?>
