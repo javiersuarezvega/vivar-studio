@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -60,7 +60,7 @@
 
   <main>
 
-    <section class="home-hero" id="home">
+    <section class="home-hero home-hero--farm" id="home" aria-label="Inicio VIVAR Studio">
       <div class="home-hero__track" id="heroTrack">
 
         <div class="home-hero__slide hero-slide is-active">
@@ -88,134 +88,151 @@
 
       <div class="home-hero__overlay"></div>
 
-      <div class="home-hero__controls">
+      <div class="container home-hero__content">
+        <div class="home-hero__eyebrow reveal-hero">Outdoor Mobile Kitchens</div>
+
+        <h1 class="reveal-hero">
+          Una nueva forma<br>
+          de vivir el exterior.
+        </h1>
+
+        <p class="reveal-hero">
+          Diseño, tecnología y confort sin necesidad de obra.
+        </p>
+      </div>
+
+      <div class="home-hero__meta">
+        <span>VIVAR Studio</span>
+        <span>Fabricantes · Argentina</span>
+      </div>
+
+      <div class="home-hero__controls" aria-label="Controles del hero">
         <button class="home-hero__arrow home-hero__arrow--prev" id="prevSlide" aria-label="Imagen anterior">‹</button>
         <button class="home-hero__arrow home-hero__arrow--next" id="nextSlide" aria-label="Siguiente imagen">›</button>
       </div>
 
-      <div class="home-hero__dots" id="heroDots">
+      <div class="home-hero__dots" id="heroDots" aria-label="Slides del hero">
         <button class="is-active" aria-label="Ir a slide 1"></button>
         <button aria-label="Ir a slide 2"></button>
         <button aria-label="Ir a slide 3"></button>
       </div>
 
-      <span class="hero-scroll">Scroll</span>
+      <a href="#concepto" class="hero-scroll" aria-label="Explorar la web">
+        <i></i>
+      </a>
     </section>
 
-    <section class="intro-editorial reveal">
-      <div class="container intro-editorial__inner">
-        <div class="intro-editorial__left">
-          <span class="section-kicker">Outdoor Mobile Kitchens</span>
-          <h1 class="intro-editorial__title">
-            Para disfrutar afuera<br>
-            y conectar adentro
-          </h1>
+    <section class="home-manifesto reveal" id="concepto">
+      <div class="container home-manifesto__inner">
+        <span class="section-kicker">Concepto VIVAR</span>
+
+        <h2>
+          VIVAR no fabrica solamente un producto.
+          Diseña experiencias para recuperar espacios exteriores olvidados.
+        </h2>
+
+        <p>
+          Una propuesta pionera en Argentina que une diseño, fabricación premium,
+          tecnología integrada y una instalación limpia para transformar terrazas,
+          galerías y jardines en nuevos lugares de encuentro.
+        </p>
+      </div>
+    </section>
+
+    <section class="home-composition reveal" aria-label="Composición visual VIVAR">
+      <div class="container home-composition__grid">
+        <figure class="home-composition__image home-composition__image--large">
+          <img src="img/medio.png" alt="Experiencia exterior VIVAR Studio" />
+        </figure>
+
+        <div class="home-composition__copy">
+          <span class="section-kicker section-kicker--dark">Experiencia exterior</span>
+          <h2>Del espacio subutilizado al lugar más vivido de la casa.</h2>
+          <p>
+            VIVAR transforma espacios exteriores en lugares donde las personas vuelven a encontrarse.
+            La experiencia empieza desde la emoción y continúa en cada detalle: materiales nobles,
+            integración tecnológica, iluminación y una estética pensada para convivir naturalmente
+            con la arquitectura del hogar.
+          </p>
         </div>
 
-        <div class="intro-editorial__right">
-          <p class="intro-editorial__text">
-            VIVAR transforma espacios exteriores poco aprovechados en experiencias reales de disfrute.
-            Una nueva forma de vivir el afuera, con diseño, tecnología, confort y sin necesidad de obra.
-          </p>
+        <figure class="home-composition__image home-composition__image--small">
+          <img src="img/explore-vivar.png" alt="Outdoor mobile kitchen VIVAR integrada en exterior" />
+        </figure>
+      </div>
+    </section>
 
-          <div class="intro-highlights">
+    <section class="home-no-work reveal" aria-label="Solución sin obra">
+      <div class="container home-no-work__inner">
+        <div class="home-no-work__headline">
+          <span class="section-kicker">Sin obra</span>
+          <h2>Un mueble premium. No una construcción fija.</h2>
+        </div>
 
-            <button class="intro-highlight" type="button" aria-expanded="false">
-              <span class="intro-highlight__top">
-                <span class="intro-highlight__icon">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M5 12h14M12 5v14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                  </svg>
-                </span>
-                <span class="intro-highlight__title">Sin obra</span>
-                <span class="intro-highlight__plus"></span>
-              </span>
+        <div class="home-no-work__items">
+          <article>
+            <span>01</span>
+            <h3>No requiere obra</h3>
+            <p>Se instala de forma limpia y ordenada, sin reformas invasivas ni procesos constructivos tradicionales.</p>
+          </article>
 
-              <span class="intro-highlight__content">
-                Instalación limpia, rápida y sin reformas invasivas. Ideal para transformar espacios exteriores existentes.
-              </span>
-            </button>
+          <article>
+            <span>02</span>
+            <h3>No queda fijo al piso</h3>
+            <p>Su lógica modular permite intervenir espacios que normalmente no podrían aprovecharse con construcciones fijas.</p>
+          </article>
 
-            <button class="intro-highlight" type="button" aria-expanded="false">
-              <span class="intro-highlight__top">
-                <span class="intro-highlight__icon">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-                <span class="intro-highlight__title">Trasladable</span>
-                <span class="intro-highlight__plus"></span>
-              </span>
-
-              <span class="intro-highlight__content">
-                Un producto pensado para acompañarte en distintos espacios, proyectos o mudanzas, manteniendo su funcionalidad.
-              </span>
-            </button>
-
-            <button class="intro-highlight" type="button" aria-expanded="false">
-              <span class="intro-highlight__top">
-                <span class="intro-highlight__icon">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/>
-                  </svg>
-                </span>
-                <span class="intro-highlight__title">Domótica premium</span>
-                <span class="intro-highlight__plus"></span>
-              </span>
-
-              <span class="intro-highlight__content">
-                Tecnología integrada para controlar iluminación, sonido y funciones clave desde una experiencia simple y elegante.
-              </span>
-            </button>
-
-            <button class="intro-highlight" type="button" aria-expanded="false">
-              <span class="intro-highlight__top">
-                <span class="intro-highlight__icon">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M12 8v5l3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                    <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.4"/>
-                  </svg>
-                </span>
-                <span class="intro-highlight__title">Instalación en 2 días</span>
-                <span class="intro-highlight__plus"></span>
-              </span>
-
-              <span class="intro-highlight__content">
-                Proceso ágil y ordenado, pensado para que puedas empezar a disfrutar tu espacio exterior en muy poco tiempo.
-              </span>
-            </button>
-
-          </div>
-
-          <div class="intro-editorial__actions">
-            <a href="contacto.html" class="btn btn--primary">Consultar proyecto</a>
-            <a href="por-que-vivar.html" class="btn btn--secondary-dark">Por qué VIVAR</a>
-          </div>
+          <article>
+            <span>03</span>
+            <h3>Puede trasladarse</h3>
+            <p>VIVAR está pensado para acompañarte en nuevos espacios, proyectos o mudanzas.</p>
+          </article>
         </div>
       </div>
     </section>
 
-<section class="visual-band reveal" aria-label="Experiencia VIVAR">
-  <img src="img/medio.png" alt="Experiencia exterior VIVAR Studio" />
+    <section class="home-differentials reveal" aria-label="Diferenciales VIVAR">
+      <div class="container home-differentials__inner">
+        <div class="home-differentials__item">
+          <span>01</span>
+          <h3>Pioneros</h3>
+          <p>Estamos creando una nueva categoría de outdoor living en Argentina.</p>
+        </div>
 
-  <div class="visual-band__overlay"></div>
+        <div class="home-differentials__item">
+          <span>02</span>
+          <h3>Domótica</h3>
+          <p>Automatización, iluminación y funciones integradas en una experiencia simple.</p>
+        </div>
 
-  <div class="visual-band__content">
-    <span>Outdoor Mobile Kitchens</span>
+        <div class="home-differentials__item">
+          <span>03</span>
+          <h3>Fabricación</h3>
+          <p>Materiales, terminaciones y soluciones pensadas para durar y elevar el espacio.</p>
+        </div>
 
-    <h2>
-      Para disfrutar afuera<br>
-      y conectar adentro.
-    </h2>
-  </div>
-</section>
+        <div class="home-differentials__item">
+          <span>04</span>
+          <h3>Accesible</h3>
+          <p>Una transformación premium que vale mucho menos de lo que imaginás.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-band visual-band--quiet reveal" aria-label="Experiencia VIVAR">
+      <img src="img/medio2.png" alt="Experiencia exterior VIVAR Studio" />
+      <div class="visual-band__overlay"></div>
+      <div class="visual-band__content">
+        <span>Outdoor Living</span>
+        <h2>Para disfrutar afuera y conectar adentro.</h2>
+      </div>
+    </section>
 
     <section class="section section--gray explore-section reveal">
       <div class="container explore-layout">
 
         <div class="explore-media reveal">
-          <img src="img/explore-vivar.png" alt="Outdoor mobile kitchen VIVAR integrada en un espacio exterior" />
+          <img src="img/explore-vivar2.png" alt="Outdoor mobile kitchen VIVAR integrada en un espacio exterior" />
         </div>
 
         <div class="explore-content">
@@ -225,7 +242,7 @@
               Diseño, producto y experiencias para vivir mejor el afuera.
             </h2>
             <p class="section-intro">
-              Un recorrido por las posibilidades de VIVAR: desde el entretenimiento hasta el diseño, el proceso, la personalización y sus diferenciales.
+              Un recorrido por las posibilidades de VIVAR: entretenimiento, diseño, proceso, personalización y diferenciales.
             </p>
           </div>
 
@@ -282,14 +299,25 @@
       </div>
     </section>
 
+    <section class="home-guarantee reveal">
+      <div class="container home-guarantee__inner">
+        <span class="section-kicker section-kicker--dark">Garantía VIVAR</span>
+        <h2>Acompañamiento, fabricación y respaldo en cada proyecto.</h2>
+        <p>
+          Cada VIVAR se desarrolla con criterio técnico, terminaciones premium y seguimiento personalizado.
+          La garantía específica puede definirse según el alcance final de cada configuración.
+        </p>
+      </div>
+    </section>
+
     <section class="cta-section reveal">
       <div class="container cta-section__inner">
         <span class="section-kicker">Contacto</span>
-        <h2 class="section-title section-title--light">Es momento de vivir tu espacio exterior de otra manera.</h2>
+        <h2 class="section-title section-title--light">Vale mucho menos de lo que imaginás.</h2>
         <p>
-          Hablemos sobre tu proyecto y diseñemos una experiencia pensada para disfrutar el afuera.
+          Te vas a sorprender. Contactanos y descubrí cómo transformar tu espacio exterior sin obra.
         </p>
-        <a href="contacto.html" class="btn btn--primary">Empezar proyecto</a>
+        <a href="contacto.html" class="btn btn--primary">Transformar mi espacio</a>
       </div>
     </section>
 
