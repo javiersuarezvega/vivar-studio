@@ -3823,3 +3823,33 @@ button {
   }
 }
 
+@media (max-width: 640px) {
+  .home-hero__content {
+    align-items: center !important;
+    text-align: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .home-hero__eyebrow,
+  .home-hero__content h1,
+  .home-hero__content p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .home-hero__content h1 {
+    max-width: 9.5ch !important;
+  }
+
+  .home-hero__content p {
+    max-width: 28ch !important;
+  }
+
+  .home-hero__dots {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
