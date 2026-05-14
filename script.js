@@ -272,3 +272,49 @@ if (processImage && processOptions.length) {
   });
 }
 
+/* DIFFERENTIALS MOBILE AUTO CAROUSEL */
+
+const diffTrack = document.querySelector(".home-differentials__inner");
+const diffItems = document.querySelectorAll(".home-differentials__item");
+const diffProgress = document.querySelector(".diff-progress span");
+
+let diffIndex = 0;
+let diffInterval = null;
+
+function moveDifferentialsCarousel() {
+  if (!diffTrack || !diffItems.length || window.innerWidth > 768) return;
+
+  const gap = 14;
+  const itemWidth = diffItems[0].offsetWidth + gap;
+
+  diffTrack.scrollTo({
+    left: diffIndex * itemWidth,
+    behavior: "smooth",
+  });
+
+  if (diffProgress) {
+    diffProgress.style.transform = `translateX(${diffIndex * 100}%)`;
+  }
+}
+
+function startDifferentialsCarousel() {
+  if (!diffTrack || !diffItems.length) return;
+
+  clearInterval(diffInterval);
+
+  if (window.innerWidth > 768) {
+    diffTrack.scrollTo({ left: 0 });
+    diffIndex = 0;
+    return;
+  }
+
+  moveDifferentialsCarousel();
+
+  diffInterval = setInterval(() => {
+    diffIndex = (diffIndex + 1) % diffItems.length;
+    moveDifferentialsCarousel();
+  }, 3000);
+}
+
+window.addEventListener("load", startDifferentialsCarousel);
+window.addEventListener("resize", startDifferentialsCarousel);
